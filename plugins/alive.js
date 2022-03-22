@@ -13,21 +13,21 @@ let handler  = async (m, { conn }) => {
   totaluser = Object.keys(db.data.users)
   ppbuffer = await fetch(pplink).then(v => v.buffer())
   conn.sendMessage(m.chat, ppbuffer, 'imageMessage', { caption:`
-❏ *Bot Name* : ${conn.user.name}
-❏ *Groups Chats* : ${conn.chats.array.filter(v => v.jid.endsWith('g.us')).map(v => v.jid).length}
-❏ *Personal Chats* : ${conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net')).map(v => v.jid).length}
-❏ *User Total* : ${totaluser.length}
-❏ *Wa Web Name* : ${conn.browserDescription[0]}
-❏ *Wa Web Version* : ${conn.browserDescription[2]}
-❏ *Browser* : ${conn.browserDescription[1]}
-❏ *Platform* : Safari Linux
-❏ *Uptime Bot* : ${clockString(process.uptime() * 1000)}
-❏ *Host Number* : @${global.conn.user.jid.split('@')[0]}
-❏ *Bio Bot* : ${ppstatus.status}`, quoted: m, sendEphemeral: true, thumbnail: fs.readFileSync('./src/R-Txzy.png'), contextInfo: { mentionedJid: [global.conn.user.jid]}})
+❏ *اسم البوت* : ${conn.user.name}
+❏ *من مجموعة* : ${conn.chats.array.filter(v => v.jid.endsWith('g.us')).map(v => v.jid).length}
+❏ *رقمي الخاص* : ${conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net')).map(v => v.jid).length}
+❏ *كامل المستعملين* : ${totaluser.length}
+❏ *واتساب رابط* : ${conn.browserDescription[0]}
+❏ *نسخة رابط الواتساب* : ${conn.browserDescription[2]}
+❏ *المتصفح* : ${conn.browserDescription[1]}
+❏ *البلاطفورف* : Safari Linux
+❏ *الوقت* : ${clockString(process.uptime() * 1000)}
+❏ *هوتس رقم* : @${global.conn.user.jid.split('@')[0]}
+❏ *البيو* : ${ppstatus.status}`, quoted: m, sendEphemeral: true, thumbnail: fs.readFileSync('./src/R-Txzy.png'), contextInfo: { mentionedJid: [global.conn.user.jid]}})
 }
 handler.help = ['alive']
 handler.tags = ['main']
-handler.command = /^(alive)$/i
+handler.command = /^(alive|حي)$/i
 handler.fail = null
 
 module.exports = handler
