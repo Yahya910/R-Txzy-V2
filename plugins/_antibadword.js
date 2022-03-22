@@ -16,9 +16,9 @@ handler.before = function (m, { isOwner, isBotAdmin }) {
 استعمل كلمة نابية 5 مرات و ستمنع من البوت نهائيا 
 
 ketik *#on antibadword* untuk menyalakan antibadword
-ketik *#astagfirullah* atau *#maaf* untuk mengurangi warning
+ketik *#استغفر الله* أو *#اسف* من الممكن أن احذف الانذار
 
-“Barang siapa yang beriman kepada Allah dan Hari Akhir maka hendaklah dia berkata baik atau diam” (HR. al-Bukhari dan Muslim).`, watermark, 'Nyalakan Antibadword', ',1 antibadword', 'Astaghfirullah', ',maaf', m)
+“ من آمن بالله واليوم الآخر فليقل خيراً أو يصمت” (رواه مسلم).`, العلامة المائية, 'انتي كلمة نابية', ',1 antibadword', 'استغفر الله', ',اسف', m)
         if (user.warning >= 5) {
             user.banned = true
             if (m.isGroup) {
