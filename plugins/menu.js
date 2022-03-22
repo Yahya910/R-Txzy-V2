@@ -6,8 +6,8 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌─〔 R-Txzy 〕
-├ Hai, *%name!*
+┌─〔 Ayanokuji 〕
+├ Ohayo, *%name!*
 ├ Memory Used : *${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB*
 └────
 %readmore`.trimStart(),
@@ -203,18 +203,18 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 			return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
                         "title": `*${ucapan()}, ${name}*`.trim(),
-                        "description": `© *R-Txzy*`.trim(),
+                        "description": `© *Yahya*`.trim(),
                         "footerText": "Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.",
                         "buttonText": "*Click Here*",
                         "listType": "SINGLE_SELECT",
                         "sections": [
                             {
                                 "rows": [{
-                                    "title": "Status Bot",
+                                    "title": "قائمة البوت",
                                     "description": "Status dan informasi Bot.",
                                     "rowId": ".botstatus"
                                 }, {
-                                    "title": "Rules",
+                                    "title": "القوانين",
                                     "description": "User yang bijak selalu mematuhi Rules.",
                                     "rowId": ".rules"
                                 }, {
@@ -225,127 +225,127 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                 "title": "⟣─────────❲ Tentang Bot dan lainnya ❳──────────⟢"
                             }, {
                                 "rows": [{
-                                    "title": `[🧾| Semua Perintah`,
+                                    "title": `[🧾| الكل`,
                                     "description": "Memberikan Semua Fitur Bot",
                                     "rowId": ".? all"
                                 }, { 
-                                    "title": "|🕋| Islam",
+                                    "title": "|🕋| الاسلام",
                                     "description": "Menu Tentang Islam",
                                     "rowId": ".? quran"
                                 }, {
-                                	"title": "|⛪| Cristian",
+                                	"title": "|⛪| المسيحية",
                                     "description": "Menu Tentang Kristen",
                                     "rowId": ".? cristian"
                                 }, {
-                                    "title": "|🏫| Edukasi",
+                                    "title": "|🏫| القديسية",
                                     "description": "Menu Edukasi",
                                     "rowId": ".? edukasi"
                                 }, { 
-                                    "title": "|📰| News",
+                                    "title": "|📰| الاخبار",
                                     "description": "Menu Berita",
                                     "rowId": ".? News"
                                 }, { 
-                                    "title": "|🎮| Game",
+                                    "title": "|🎮| الالعاب",
                                     "description": "Menu Game",
                                     "rowId": ".? game"
                                 }, { 
-                                    "title": "|🗺️| Epic Rpg",
+                                    "title": "|🗺️| العاب rpg",
                                     "description": "Menu Game RPG",
                                     "rowId": ".? rpg"
                                 }, { 
-                                    "title": "|📈| XP",
+                                    "title": "|📈| النقاط",
                                     "description": "XP Dan Level",
                                     "rowId": ".? xp"
                                 }, { 
-                                    "title": "|🔞| NSFW",
+                                    "title": "|🔞| الهنتاي",
                                     "description": "Menu Bokep",
                                     "rowId": ".? nsfw"
                                 }, { 
-                                    "title": "|🖼️| Random Image",
+                                    "title": "|🖼️| صور عشوائية",
                                     "description": "Menu Foto Random",
                                     "rowId": ".? image"
                                 }, { 
-                                    "title": "|🎇| Stiker",
+                                    "title": "|🎇| ستيكر",
                                     "description": "Menu Buat Stiker",
                                     "rowId": ".? stiker"
                                 }, { 
-                                    "title": "|🐚| Kerang Ajaib",
+                                    "title": "|🐚| عجيب",
                                     "description": "Menurut Kerang ajaib....",
                                     "rowId": ".? kerangajaib"
                                 }, { 
-                                    "title": "|📑| Quotes",
+                                    "title": "|📑| قائمة quotes",
                                     "description": "Menu Quotes",
                                     "rowId": ".? quotes"
                                 }, { 
-                                    "title": "|🏛️| Admin",
+                                    "title": "|🏛️| ادمن",
                                     "description": "Menu Admin Group",
                                     "rowId": ".? admin"
                                 }, { 
-                                    "title": "|🏢| Grup",
+                                    "title": "|🏢| أوامر المجموعة",
                                     "description": "Menu Group",
                                     "rowId": ".? grup"
                                 }, { 
-                                    "title": "|🔝| Premium",
+                                    "title": "|🔝| الاشتراك",
                                     "description": "Menu Untuk Premium",
                                     "rowId": ".? premium"
                                 }, { 
-                                    "title": "|🖥️| Internet",
+                                    "title": "|🖥️| الانترنت",
                                     "description": "Cari Sesuatu Di Bot",
                                     "rowId": ".? internet"
                                 }, { 
-                                    "title": "|🥷| Anonymous",
+                                    "title": "|🥷| الهاكر",
                                     "description": "Mainkan Anonymous Chat",
                                     "rowId": ".? anonymous"
                                 }, { 
-                                    "title": "|✒️| Nulis & Logo",
+                                    "title": "|✒️| لوغو كتابة",
                                     "description": "Menu Nulis & Logo",
                                     "rowId": ".? nulis"
                                 }, { 
-                                    "title": "|📺| Downloader",
+                                    "title": "|📺| التحميلات",
                                     "description": "Download Sesuatu Di Bot",
                                     "rowId": ".? downloader"
                                 }, { 
-                                    "title": "|🔧| Tools",
+                                    "title": "|🔧| الادوات",
                                     "description": "Tools Yang Bisa di Gunakan Di Bot",
                                     "rowId": ".? tools"
                                 }, { 
-                                    "title": "|🎇| Fun",
+                                    "title": "|🎇| التوفيه",
                                     "description": "Menu Ceria",
                                     "rowId": ".? fun"
                                 }, { 
-                                    "title": "|📂| Database",
+                                    "title": "|📂| الداطا",
                                     "description": "Simpan Sesuatu Di Bot",
                                     "rowId": ".? database"
                                 }, { 
-                                    "title": "|📝| Vote & Absen",
+                                    "title": "|📝| التصويت و الغياب",
                                     "description": "Menu Vote & Absen",
                                     "rowId": ".? vote"
                                 }, { 
-                                    "title": "|🎙️| Pengubah Suara",
+                                    "title": "|🎙️| الصوت",
                                     "description": "Ubah Suaramu",
                                     "rowId": ".? audio"
                                 }, { 
-                                    "title": "|🤖| Jadi Bot",
+                                    "title": "|🤖| نسخ البوت",
                                     "description": "Jadi Bot",
                                     "rowId": ".? jadibot"
                                 }, { 
-                                    "title": "|⛩️| Anime",
+                                    "title": "|⛩️| انمي",
                                     "description": "Cari Anime Di Bot",
                                     "rowId": ".? anime"
                                 }, { 
-                                    "title": "|ℹ️| Info",
+                                    "title": "|ℹ️| المعلومات",
                                     "description": "Info Tentang Bot",
                                     "rowId": ".? info"
                                 }, { 
-                                    "title": "Tanpa Kategori",
+                                    "title": "كاتاكوري",
                                     "description": "",
                                     "rowId": ".? tanpakategori"
                                 }, { 
-                                    "title": "|🧑‍💻| Owner",
+                                    "title": "|🧑‍💻| صاحب البوت",
                                     "description": "Menu Khusu Owner",
                                     "rowId": ".? owner"
                                 }],
-                                "title": "⟣──────────────❲  All-Menu  ❳──────────────⟢"
+                                "title": "⟣──────────────❲  الكل  ❳──────────────⟢"
                             }, {
                                 "rows": [{
                                     "title": "Owner bot",
@@ -360,11 +360,11 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                     "description": "Terimakasih untuk user yang telah menggunakan bot, jika ada kesalahan atau permintaan bisa chat ke nomor owner\nNote: chat P/main² tidak akan di respon(user bisa terkena banned/block)",
                                     "rowId": ".creator"
                                 }, {
-                                    "title": "Thanks To |🎖️|",
-                                    "description": "Terima kasih banyak untuk user yang telah berpartisipasi dalam bot",
+                                    "title": "شكرا ل |🎖️|",
+                                    "description": "تم تطوير و تفعيل و تعديل البوت من طرف يحيى",
                                     "rowId": ".tqto"
                                 }],
-                                "title": "⟣──────────────❲ Penutup ❳───────────────⟢"
+                                "title": "⟣──────────────❲ بوووووووت ❳───────────────⟢"
                             }
                         ], "contextInfo": 
 						{ "stanzaId": m.key.id,
@@ -487,18 +487,18 @@ function clockString(ms) {
 }
 function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
-  res = "Selamat dinihari🌌"
+  res = "صباحو🌌"
   if (time >= 4) {
-    res = "Selamat pagi🌅"
+    res = "الخير🌅"
   }
   if (time > 10) {
-    res = "Selamat siang🏙️"
+    res = "مساء🏙️"
   }
   if (time >= 15) {
-    res = "Selamat sore🌇"
+    res = "الخير🌇"
   }
   if (time >= 18) {
-    res = "Selamat malam🌃"
+    res = "ليلة سعيدة🌃"
   }
   return res
 }
