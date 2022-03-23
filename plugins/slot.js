@@ -5,9 +5,9 @@ ${usedPrefix + command} 100
 
 artinya kamu bertaruh 100 XP.
 
-*JACKPOT:* taruhan kamu digandakan
-*Kurang beruntung:* +1 XP
-*Kalah:* taruhan kamu diambil`.trim()
+*مبررووك:* taruhan kamu digandakan
+*|:* +1 XP
+*لست محظوظا:* taruhan kamu diambil`.trim()
     if (!args[0]) throw fa
     if (isNaN(args[0])) throw fa
     let taruhan = parseInt(args[0])
@@ -19,7 +19,7 @@ artinya kamu bertaruh 100 XP.
         throw `XP kamu tidak cukup!`
     }
 
-    let emojis = ["🏆️", "🥇", "💵"];
+    let emojis = ["💜", "💖", "❤️"];
     let a = Math.floor(Math.random() * emojis.length);
     let b = Math.floor(Math.random() * emojis.length);
     let c = Math.floor(Math.random() * emojis.length);
@@ -43,18 +43,18 @@ artinya kamu bertaruh 100 XP.
     }
     let end;
     if (a == b && b == c) {
-        end = `JACKPOT! 🥳 *+${taruhan + taruhan} XP*`
+        end = `مبروك! 🥳 *+${taruhan + taruhan} XP*`
         users.exp += taruhan
     } else if (a == b || a == c || b == c) {
-        end = `Kurang beruntung 👍 *+1 XP*`
+        end = `لحسن الحظ 👍 *+1 XP*`
         users.exp += 1
     } else {
-        end = `Kamu kalah 😥 *-${taruhan} XP*`
+        end = `للأسف 😥 *-${taruhan} XP*`
         users.exp -= taruhan
     }
     users.lastslot = new Date * 1
     return await conn.sendButton(m.chat,
-        `*[ 🎰 | SLOTS ]*
+        `*[ 🎰 | كازينو ]*
 
 ${end}
 
