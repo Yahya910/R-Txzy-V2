@@ -8,8 +8,8 @@ let handler = async function (m, { text, usedPrefix, command }) {
   if (!name) throw 'Nama tidak boleh kosong (Alphanumeric)'
   if (!age) throw 'Umur tidak boleh kosong (Angka)'
   age = parseInt(age)
-  if (age > 70) throw 'Umur terlalu tua'
-  if (age < 5) throw 'Bayi bisa ngetik sesuai format bjir ._.'
+  if (age > 70) throw 'انت كبير جدا '
+  if (age < 5) throw 'انت صغير جدا ._.'
   user.name = name.trim()
   user.age = age
   user.regTime = + new Date
@@ -18,10 +18,10 @@ let handler = async function (m, { text, usedPrefix, command }) {
   m.reply(`
 Daftar berhasil!
 
-┌─〔 Info 〕
-├ Nama: ${name}
-├ Umur: ${age} tahun
-├ SN: ${sn}
+┌─〔 المعلومات 〕
+├ الاسم: ${name}
+├ العمر: ${age} tahun
+├ كود التفعيل: ${sn}
 └────
 
 simpan/bintangi pesan ini karena SN (Serial Number) digunaan untuk daftar ulang
@@ -30,7 +30,7 @@ simpan/bintangi pesan ini karena SN (Serial Number) digunaan untuk daftar ulang
 handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <nama>.<umur>')
 handler.tags = ['xp']
 
-handler.command = /^(daftar|reg(ister)?)$/i
+handler.command = /^(التسجيل|daftar|reg(ister)?)$/i
 
 module.exports = handler
 
