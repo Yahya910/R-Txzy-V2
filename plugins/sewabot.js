@@ -2,28 +2,27 @@ let fetch = require('node-fetch')
 let { MessageType } = require('@adiwajshing/baileys')
 let handler = async(m, { conn }) => {
     let kamisato = `
-┌〔 List Berlangganan 〕
-├ 2 Bulan
-├ 1 Bulan
-├ 1 Minggu
-├ Trial 3 Hari
+┌〔 العضوية 〕
+├ العضوية المؤقتة
+├ العضوية الدائمة
+├ VIP
+├ و العضوية التجريبية
 └────
-Silahkan klik pada "List Harga" untuk melihat list.
+طريقة الدفع غير محددة.
+مميزاتها premium
 
-Pembayaran:
-Pulsa : 085730903853
-GoPay: 085730903853
+
 `.trim()
     const button = {
         buttonText: 'List Harga',
         description: kamisato,
         sections:  [{title: "Silahkan di pilih", rows: [
-        {title: '2 Bulan', description: "Rp15.000\nSewa bot tanpa batasan waktu.", rowId:".masuk"},
-        {title: '1 Bulan', description: "Rp10.000\nSewa bot selama 1 bulan.", rowId:".masuk"},
-        {title: '1 Minggu', description: "Rp7.000\nSewa bot selama 1 minggu.", rowId:".masuk"},
-        {title: 'Trial', description: "GRATIS\nBot gratis 3 Hari.", rowId:".join"},
-        {title: 'Owner', description: "Chat owner nya jika ada perlu.", rowId:".owner"},
-        {title: 'Rules', description: "Kebijakan Privasi, Syarat Ketentuan dan Peraturan.", rowId:".snk"},
+        {title: 'العضوية المؤقتة', description: 5 دراهم\ .", rowId:".masuk"},
+        {title: 'العضوية الدائمة', description: "20 درهم\", rowId:".masuk"},
+        {title: 'VIP', description: "50 درهم\", rowId:".masuk"},
+        {title: 'التجريبية', description: "مجانية\", rowId:".join"},
+        {title: 'صاحب البوت', description: "التحدث مع البوت بشأن طرق دفع أخرى.", rowId:".owner"},
+        {title: 'القوانين', description: "لا يحق استرجاع المال دون داع", rowId:".snk"},
        ] }],
         listType: 1
        }
