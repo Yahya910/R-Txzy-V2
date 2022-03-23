@@ -20,17 +20,17 @@ let handler = async (m, { conn, participants, groupMetadata, text }) => {
         if (text) return m.reply(msToDate(expired - new Date() * 1))
 
         let caption = `*Informasi Grup*\n
-*ID:* 
+*الايدي:* 
 ${groupMetadata.id}
 
-*Nama:* 
+*اسم المجموعة:* 
 ${groupMetadata.subject}
 
-*Deskripsi:* 
+*البايو:* 
 ${groupMetadata.desc}
 
-*Total Anggota:*
-${participants.length} Anggota
+*مجموع المنخرطين في المجموعة:*
+${participants.length} عضو
 
 *Pembuat Grup:* 
 @${m.chat.split`-`[0]}
@@ -39,15 +39,15 @@ ${participants.length} Anggota
 ${listAdmin}
 
 *Pengaturan Bot:*
-${antiLink ? '✅' : '❌'} Anti Link
-${global.db.data.chats[m.chat].delete ? '❌' : '✅'} Anti Delete
-${isBanned ? '✅' : '❌'} Banned
-${descUpdate ? '✅' : '❌'} Deskprisi
-${detect ? '✅' : '❌'} Detect
-${stiker ? '✅' : '❌'} Stiker
-${welcome ? '✅' : '❌'} Welcome
+${antiLink ? '✅' : '❌'} روابط
+${global.db.data.chats[m.chat].delete ? '❌' : '✅'} منع الحذف 
+${isBanned ? '✅' : '❌'} ممنوع من البوت
+${descUpdate ? '✅' : '❌'} محذث
+${detect ? '✅' : '❌'} محدد
+${stiker ? '✅' : '❌'} ستيكر
+${welcome ? '✅' : '❌'} رسالة ترحيب
 
-*Pengaturan Pesan Bot:*
+*رسائل البوت:*
 Welcome: ${sWelcome}
 Bye: ${sBye}
 Promote: ${sPromote}
