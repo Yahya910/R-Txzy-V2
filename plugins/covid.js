@@ -5,11 +5,11 @@ let handler = async (m, { text, usedPrefix, command }) => {
   if (!res.ok) throw await `${res.status} ${res.statusText}`
   let json = await res.json()
   if (json.confirmed) m.reply(`
-Negara: ${text}
-Terkonfirmasi: ${json.confirmed.value}
-Sembuh: ${json.recovered.value}
-Meninggal: ${json.deaths.value}
-Terakhir Update: ${json.lastUpdate}
+الدولة: ${text}
+الحالات المؤكدة: ${json.confirmed.value}
+المحتملين: ${json.recovered.value}
+الوفايات: ${json.deaths.value} 
+آخر تحديث: ${json.lastUpdate}
 `.trim())
   else throw json
 }
